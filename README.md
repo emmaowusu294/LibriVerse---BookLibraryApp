@@ -1,4 +1,4 @@
-﻿# LibriVerse - Online Digital Library 📚💻 -- Emmanuel Owusu
+﻿# LibriVerse - Online Digital Library 📚💻 --- Emmanuel Owusu
 
 **Landing Page:**
 ![LibriVerse Landing Page](docs/images/landing-page.png "LibriVerse Home")
