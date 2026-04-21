@@ -22,7 +22,7 @@ builder.Services.AddControllersWithViews();
 
 //register database
 builder.Services.AddDbContext<LibraryDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryConnection")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("LibraryConnection")));
 
 //register book service 
 builder.Services.AddScoped<IBookService, BookService>();
