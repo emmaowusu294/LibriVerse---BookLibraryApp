@@ -6,12 +6,13 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o /app
 
 # Stage 2: Run the application
-# Stage 2: Run the application
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
+
+# ADD THIS LINE: Tells Docker to run as an admin so it can save images
+USER root
+
 WORKDIR /app
 COPY --from=build /app .
-
-# ADD THIS EXACT LINE to manually move your seeded database over
 COPY --from=build /source/libriverse.db .
 
 EXPOSE 8080
